@@ -1,7 +1,6 @@
 from krygche import CircleOverlay #moi file
 import sys 
 from PyQt5 import QtWidgets
-from random import randint
 from mainPage import mainPage #moi
 from secondPage import secondPage #moi
 from thirdPage import thirdPage #moi file
