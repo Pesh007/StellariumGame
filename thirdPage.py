@@ -5,13 +5,16 @@ from random import randint
 from namirane import centrirane #moi file
 
 
-def thirdPage(round: int):
+def thirdPage(rounds: int):
 
     global stars, star
     stars = read_excel("C:/Users/user/Desktop/python1/StellariumIgra/nai-iarki-zvezdi_full.xlsx")
     
     star = stars.iloc[randint(0,len(stars)-1)]
     centrirane(float(star[stars.columns[4]]), float(star[stars.columns[5]]))
+
+    right_answers: int = 0
+
     def check():
         
         user_input = entry.get()
@@ -23,12 +26,20 @@ def thirdPage(round: int):
             label.configure(text=f"Грешно! Правилното име е: {star[stars.columns[0]]}")
 
     def next():
+        rounds -= 1
         global star
         star = stars.iloc[randint(0,len(stars)-1)]
         centrirane(float(star[stars.columns[4]]), float(star[stars.columns[5]]))
 
         entry.delete(0, ctk.END)
         label.configure(text=" ")
+        if rounds <= 0:
+            label.configure(text="Играта приключи! Поздравления!")
+            entry.configure(state=ctk.DISABLED)
+            button1.configure(state=ctk.DISABLED)
+            button2.configure(state=ctk.DISABLED)
+        else:
+            label.configure(text=f"Оставащи рундове: {rounds}")
         
 
     app = ctk.CTk()
