@@ -17,10 +17,6 @@ def main():
 
     thirdPage(rounds)
 
-    # ifejifji
-
-
-
 
     sys.exit(app.exec_())
 
