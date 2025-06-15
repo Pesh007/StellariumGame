@@ -1,0 +1,21 @@
+//Author: petar
+//Description: Set up the app for star guessing
+
+StelSkyDrawer.setFlagStarMagnitudeLimit(true);  //enables the next function 
+StelSkyDrawer.setCustomStarMagnitudeLimit(4); //limit max visible mag to 4
+
+LandscapeMgr.setFlagAtmosphere(false); //remove the atmosphere
+LandscapeMgr.setFlagCardinalPoints(false); //remove  the cardinal points (N, W, S, E)
+LandscapeMgr.setFlagLandscape(false);  //remove the landscape
+
+SporadicMeteorMgr.setFlagShow(false); //remove sporadic meteors
+
+SolarSystem.setFlagPlanets(false); //remove the planets
+
+StarMgr.setFlagLabels(false); //remove the labels of the stars
+
+MeteorShowers.setEnableMarker(false); //remove the radiants of the meteor showers
+
+Satellites.setFlagHintsVisible(false);
+Satellites.setFlagLabelsVisible(false);
+Satellites.setFlagHideInvisible(true);
