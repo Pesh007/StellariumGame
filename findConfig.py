@@ -10,7 +10,3 @@ def find_config_path():
     else:
         return None
 
-path = find_config_path()
-print(path)
-if None:
-    print("Неуспешно намиране на пътя до конфигурационния файл на Stellarium.")
