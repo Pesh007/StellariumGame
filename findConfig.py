@@ -7,10 +7,10 @@ def find_config_path():
         return os.path.join(os.environ['APPDATA'], 'Stellarium', 'config.ini')
     elif system == 'Linux':
         return os.path.expanduser('~/.stellarium/config.ini')
-    elif system == 'Darwin':  # macOS
-        return os.path.expanduser('~/Library/Application Support/Stellarium/config.ini')
     else:
         return None
 
 path = find_config_path()
-print(f"Stellarium config path: {path if path and os.path.exists(path) else 'Not found'}")
+print(path)
+if None:
+    print("Неуспешно намиране на пътя до конфигурационния файл на Stellarium.")
